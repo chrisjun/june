@@ -1,3 +1,4 @@
+bug fix
 solve conflict2
 
 git status
