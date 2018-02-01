@@ -1,3 +1,5 @@
+solve conflict1
+
 git status
 git add 新建一个文件(此时还在本地)，图标有个+号
 git status
