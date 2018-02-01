@@ -1,3 +1,79 @@
 git status
-git add
-git push
+git add 新建一个文件(此时还在本地)，图标有个+号
+git status
+git commit 提交本次修改（仍在本地），图标有个对勾
+git status
+git push 同步到github
+git status
+
+过程记录
+F:\github\june>git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed
+
+        learngit1.txt
+
+nothing added to commit but untracked files present (use "git a
+
+F:\github\june>git add learngit1.txt
+
+F:\github\june>git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   learngit1.txt
+
+
+F:\github\june>git commit
+[master 0d1016c] new file
+ 1 file changed, 3 insertions(+)
+ create mode 100644 learngit1.txt
+
+F:\github\june>git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+nothing to commit, working directory clean
+
+F:\github\june>git push
+warning: push.default is unset; its implicit value has changed
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the traditional behavior, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local bra
+to the remote branches that already exist with the same name.
+
+Since Git 2.0, Git defaults to the more conservative 'simple'
+behavior, which only pushes the current branch to the correspon
+remote branch that 'git pull' uses to update the current branch
+
+See 'git help config' and search for 'push.default' for further
+(the 'simple' mode was introduced in Git 1.7.11. Use the simila
+'current' instead of 'simple' if you sometimes use older versio
+
+Username for 'https://github.com': chrisjun
+Password for 'https://chrisjun@github.com':
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 299 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/chrisjun/june.git
+   6641ef3..0d1016c  master -> master
+
+F:\github\june>git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working directory clean
+
+F:\github\june>
